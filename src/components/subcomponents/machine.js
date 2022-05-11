@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Col } from "reactstrap";
 import { FaRobot } from "react-icons/fa";
+import { useModal, Modal } from "react-morphing-modal";
+import "react-morphing-modal/dist/ReactMorphingModal.css";
 
 export const Machine = (props) => {
+  const { modalProps, getTriggerProps } = useModal();
   const { changeOpacity } = props;
   const [textOpacity, setTextOpacity] = useState(0);
   const [iconOpacity, setIconOpacity] = useState(1);
@@ -25,11 +28,19 @@ export const Machine = (props) => {
         color={color}
       />
       <p
-        style={{ opacity: textOpacity, color: color }}
+        {...getTriggerProps()}
+        style={{
+          opacity: textOpacity,
+          color: "#ffffff",
+          backgroundColor: color,
+        }}
         className="btn element texto"
       >
         Machine Learning
       </p>
+      <Modal {...modalProps} className="modal">
+        Machine Learning
+      </Modal>
     </Col>
   );
 };

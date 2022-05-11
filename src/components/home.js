@@ -7,8 +7,11 @@ import { Firestore } from "./subcomponents/firestore";
 import { Database } from "./subcomponents/database";
 import { Storage } from "./subcomponents/storage";
 import { Hosting } from "./subcomponents/hosting";
+import { useModal, Modal } from "react-morphing-modal";
+import "react-morphing-modal/dist/ReactMorphingModal.css";
 
 export const Home = () => {
+  const { modalProps, getTriggerProps } = useModal();
   const [textOpacity, setTextOpacity] = useState(0);
   const [iconOpacity, setIconOpacity] = useState(1);
   const [color] = useState("#FFCA28");
@@ -53,11 +56,17 @@ export const Home = () => {
               color={color}
             />
             <h1
-              style={{ opacity: textOpacity, color: color }}
-              className="element firebase texto"
+              {...getTriggerProps()}
+              style={{
+                opacity: textOpacity,
+                color: "#ffffff",
+                backgroundColor: color,
+              }}
+              className="btn element firebase texto"
             >
               FIREBASE
             </h1>
+            <Modal {...modalProps} className="modal">FIREBASE</Modal>
           </Col>
           <Database changeOpacity={changeOpacity} />
         </Row>

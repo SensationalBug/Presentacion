@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Col } from "reactstrap";
 import { CgDatabase } from "react-icons/cg";
+import { useModal, Modal } from "react-morphing-modal";
+import "react-morphing-modal/dist/ReactMorphingModal.css";
 
 export const Database = (props) => {
+  const { modalProps, getTriggerProps } = useModal();
   const { changeOpacity } = props;
   const [textOpacity, setTextOpacity] = useState(0);
   const [iconOpacity, setIconOpacity] = useState(1);
@@ -25,11 +28,19 @@ export const Database = (props) => {
         color={color}
       />
       <p
-        style={{ opacity: textOpacity, color: color }}
+        {...getTriggerProps()}
+        style={{
+          opacity: textOpacity,
+          color: "#ffffff",
+          backgroundColor: color,
+        }}
         className="btn element texto"
       >
         Realtime Database
       </p>
+      <Modal {...modalProps} className="modal">
+        Realtime Database
+      </Modal>
     </Col>
   );
 };

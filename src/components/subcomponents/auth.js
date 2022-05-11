@@ -34,7 +34,7 @@ export const Auth = (props) => {
       >
         Authentication
       </p>
-      <Modal {...modalProps} className="modal">World</Modal>
+      <Modal {...modalProps} className="modal">Authentication</Modal>
     </Col>
   );
 };
