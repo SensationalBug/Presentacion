@@ -1,0 +1,27 @@
+.box {
+  background-color: #2c343f;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-control {
+  margin: 10px 0px;
+}
+
+.botones .btn {
+  width: 45%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header h1 {
+  width: 100%;
+  user-select: none;
+}

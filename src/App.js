@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Home } from "./components/home";
 import { useEffect, useRef } from "react";
 
+import UserStateProvider from "./components/context/userStateContext";
+
 const App = () => {
   let canvasRef = useRef();
 
@@ -196,10 +198,12 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <canvas ref={canvasRef} className="canvas position-absolute"></canvas>
-      <Home />
-    </div>
+    <UserStateProvider>
+      <div>
+        <canvas ref={canvasRef} className="canvas position-absolute"></canvas>
+        <Home />
+      </div>
+    </UserStateProvider>
   );
 };
 

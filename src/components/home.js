@@ -21,11 +21,16 @@ export const Home = () => {
     icon === 1 ? setIcon(0) : setIcon(1);
   };
 
+  const clear = (email, pwd) => {
+    email.current.value = "";
+    pwd.current.value = "";
+  };
+
   return (
     <Container fluid={true} className="home-page">
       <Row>
         <Row className="fila">
-          <Auth changeOpacity={changeOpacity} />
+          <Auth changeOpacity={changeOpacity} clear={clear}/>
           <Machine changeOpacity={changeOpacity} />
         </Row>
         <Row className="fila">
@@ -66,7 +71,9 @@ export const Home = () => {
             >
               FIREBASE
             </h1>
-            <Modal {...modalProps} className="modal">FIREBASE</Modal>
+            <Modal {...modalProps} className="modal">
+              FIREBASE
+            </Modal>
           </Col>
           <Database changeOpacity={changeOpacity} />
         </Row>
