@@ -9,7 +9,7 @@ export const Database = (props) => {
   const { changeOpacity } = props;
   const [textOpacity, setTextOpacity] = useState(0);
   const [iconOpacity, setIconOpacity] = useState(1);
-  const [color] = useState("#41b749");
+  const [color] = useState("#e04d4d");
 
   return (
     <Col

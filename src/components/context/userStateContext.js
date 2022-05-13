@@ -4,7 +4,7 @@ import { app } from "../../firebaseConfig/firebaseConfig";
 export const UserStateContext = createContext();
 
 const UserStateProvider = (props) => {
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(false);
   useEffect(() => {
     app.auth().onAuthStateChanged((user) => {
       if (user) {

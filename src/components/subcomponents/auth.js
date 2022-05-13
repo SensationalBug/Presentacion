@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useModal, Modal } from "react-morphing-modal";
+import { UserStateContext } from "../context/userStateContext";
 import "react-morphing-modal/dist/ReactMorphingModal.css";
+import { useModal, Modal } from "react-morphing-modal";
 import { HiUsers } from "react-icons/hi";
+import authImage from "../../images/Auth.svg";
 import { Col } from "reactstrap";
 import { Login } from "../login";
-import { UserStateContext } from "../context/userStateContext";
 
 export const Auth = (props) => {
   const { modalProps, getTriggerProps } = useModal();
@@ -17,8 +18,8 @@ export const Auth = (props) => {
   useEffect(() => {
     if (!user) {
       setAuthColor("#9e3db5");
-    } else{
-      setAuthColor("#e04d4d")
+    } else {
+      setAuthColor("#41b749");
     }
   }, [user]);
 
@@ -49,8 +50,9 @@ export const Auth = (props) => {
       >
         Authentication
       </p>
-      <Modal {...modalProps} className="modal">
-        <h1>Authentication</h1>
+      <Modal {...modalProps}>
+        <img alt="..." src={authImage} className="auth-image" />
+        <div className="vidrio"></div>
         <Login clear={clear} />
       </Modal>
     </Col>
