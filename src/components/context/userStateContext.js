@@ -8,7 +8,7 @@ const UserStateProvider = (props) => {
   useEffect(() => {
     app.auth().onAuthStateChanged((user) => {
       if (user) {
-        setUser(user.uid);
+        setUser(user);
       }
     });
   });

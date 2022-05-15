@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from "react";
-import { ButtonGroup, Col, Container, FormGroup, Row } from "reactstrap";
+import { ButtonGroup, Col, Container, Row } from "reactstrap";
 import { ImExit, ImInfo } from "react-icons/im";
 import { app } from "../firebaseConfig/firebaseConfig";
 import { UserStateContext } from "./context/userStateContext";
@@ -65,7 +65,7 @@ export const Login = (props) => {
   };
 
   const info = () => {
-    user ? toast.info(user) : toast.info("No hay nadie logueado");
+    user ? toast.info(user.email) : toast.info("No hay nadie logueado");
   };
 
   return (

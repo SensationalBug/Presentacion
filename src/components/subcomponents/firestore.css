@@ -2,38 +2,29 @@
   position: absolute;
   right: 0;
   top: 0;
-  width: calc(78vh + 10vw);
+  width: calc(75vh + 10vw);
 }
 
 .firestore-box {
-  position: relative;
   width: 50vw;
-  margin: auto;
 }
 
 .firestore-container {
   position: relative;
-  left: 0vw;
-  top: -5vh;
   display: flex;
-  flex-direction: row;
+  height: 100%;
 }
 
 .firestore-content {
   width: 100%;
 }
 
-.firestore-form {
-  width: 100%;
+.table {
+  height: 0;
 }
 
 @media screen and (min-width: 1400px) {
-  .firestore-content {
-    width: 100%;
-  }
   .firestore-container {
-    display: flex;
-    flex-direction: column;
-    left: -20vw;
+    top: 0;
   }
 }

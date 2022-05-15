@@ -3,6 +3,7 @@ import { Col } from "reactstrap";
 import { BsFolderFill } from "react-icons/bs";
 import { useModal, Modal } from "react-morphing-modal";
 import "react-morphing-modal/dist/ReactMorphingModal.css";
+import storageImage from "../../images/Storage.svg";
 
 export const Storage = (props) => {
   const { modalProps, getTriggerProps } = useModal();
@@ -39,7 +40,8 @@ export const Storage = (props) => {
         Storage
       </p>
       <Modal {...modalProps} className="modal">
-        Storage
+        <img alt="..." src={storageImage} className="firestore-image" />
+        <div className="vidrio"></div>
       </Modal>
     </Col>
   );
