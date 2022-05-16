@@ -3,6 +3,7 @@ import { Col } from "reactstrap";
 import { FaRobot } from "react-icons/fa";
 import { useModal, Modal } from "react-morphing-modal";
 import "react-morphing-modal/dist/ReactMorphingModal.css";
+import machineImage from "../../images/Machine.svg";
 
 export const Machine = (props) => {
   const { modalProps, getTriggerProps } = useModal();
@@ -39,7 +40,8 @@ export const Machine = (props) => {
         Machine Learning
       </p>
       <Modal {...modalProps} className="modal">
-        Machine Learning
+        <img alt="..." src={machineImage} className="storage-image" />
+        <div className="vidrio"></div>
       </Modal>
     </Col>
   );

@@ -62,7 +62,7 @@ export const FirestoreContent = (props) => {
 
   return (
     <Container className="firestore-container">
-      <Row className="firestore-box mx-1">
+      <Row className="firestore-box mx-3">
         <Col className="firestore-content col-md-6 col-lg-6 col">
           <h1 className="text-center">Firebase Firestore</h1>
           <p className="all-desc my-4">
@@ -95,7 +95,7 @@ export const FirestoreContent = (props) => {
           </Table>
         </Col>
       </Row>
-      <Row className="firestore-box mx-1 text-center">
+      <Row className="firestore-box mx-3 text-center">
         <div className="form rounded m-auto p-4 col-xxl-6 col-12 bg-dark">
           <h1 className="text-center py-2">ADD INFO</h1>
 

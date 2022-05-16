@@ -39,7 +39,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: calc(78vh + 10vw);
+  width: calc(77vh + 10vw);
 }
 
 .auth-container {

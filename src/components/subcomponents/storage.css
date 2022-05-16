@@ -1,0 +1,36 @@
+.storage-container {
+  position: absolute;
+  top: 0;
+}
+
+.storage-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: calc(75vh + 10vw);
+}
+
+.storage-desc {
+  height: 100vh;
+  padding-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-file {
+  transition: 500ms;
+}
+
+.upload-file:hover {
+  color: #ffca28;
+}
+
+.button-group button {
+  width: 100%;
+}
+
+.user-image {
+  width: 25vw;
+}

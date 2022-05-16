@@ -5,10 +5,6 @@
   width: calc(75vh + 10vw);
 }
 
-.firestore-box {
-  width: 50vw;
-}
-
 .firestore-container {
   position: relative;
   display: flex;
@@ -26,5 +22,8 @@
 @media screen and (min-width: 1400px) {
   .firestore-container {
     top: 0;
+  }
+  .firestore-box{
+    width: 50vw ;
   }
 }
