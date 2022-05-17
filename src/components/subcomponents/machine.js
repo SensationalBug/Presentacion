@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import "./machine.css";
 import { Col } from "reactstrap";
+import React, { useState } from "react";
 import { FaRobot } from "react-icons/fa";
+import { MachineContent } from "./machineContent";
+import machineImage from "../../images/Machine.svg";
 import { useModal, Modal } from "react-morphing-modal";
 import "react-morphing-modal/dist/ReactMorphingModal.css";
-import machineImage from "../../images/Machine.svg";
 
 export const Machine = (props) => {
   const { modalProps, getTriggerProps } = useModal();
@@ -42,6 +44,7 @@ export const Machine = (props) => {
       <Modal {...modalProps} className="modal">
         <img alt="..." src={machineImage} className="storage-image" />
         <div className="vidrio"></div>
+        <MachineContent />
       </Modal>
     </Col>
   );

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { Col, Container, Row } from "reactstrap";
 import { BsFolderFill } from "react-icons/bs";
 import { MdCloudUpload } from "react-icons/md";
+import { FaUser } from "react-icons/fa";
 import { useModal, Modal } from "react-morphing-modal";
 import { app } from "../../firebaseConfig/firebaseConfig";
 import "react-morphing-modal/dist/ReactMorphingModal.css";
@@ -23,14 +24,18 @@ export const Storage = (props) => {
   const imgPlace = useRef();
 
   useEffect(() => {
-    database.collection("users").onSnapshot((querySnapShot) => {
-      querySnapShot.forEach((doc) => {
-        if (doc.id === user.uid) {
-          setImgURL(doc.data().imgURL);
-        }
+    if (user) {
+      database.collection("users").onSnapshot((querySnapShot) => {
+        querySnapShot.forEach((doc) => {
+          if (doc.id === user.uid) {
+            setImgURL(doc.data().imgURL);
+          }
+        });
       });
-    });
-  });
+    } else {
+      setImgURL("");
+    }
+  }, [user, database]);
 
   const file = () => {
     if (imgPlace.current.files[0]) {
@@ -119,7 +124,11 @@ export const Storage = (props) => {
               </div>
             </Col>
             <Col className="mx-2 storage-desc">
-              <img alt="..." src={imgURL} className="user-image" />
+              {imgURL ? (
+                <img alt="..." src={imgURL} className="user-image" />
+              ) : (
+                <FaUser size="20em" color="#717171" />
+              )}
             </Col>
           </Row>
         </Container>
