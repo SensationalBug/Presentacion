@@ -41,6 +41,29 @@
   font-size: 50px;
 }
 
+/* CLASES QUE AFECTAN LAS VENTANAS DE CADA FUNCION */
+
+.all-window {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.all-title {
+  font-size: 100px;
+}
+
+.all-arrow-container {
+  display: flex;
+  justify-content: center;
+}
+
+.all-parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 @media screen and (max-width: 700px) {
   .home-page {
     display: none;

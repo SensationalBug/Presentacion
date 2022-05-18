@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { Container, Row, Col } from "reactstrap";
+import { HomeContent } from "./homeContent";
 import { SiFirebase } from "react-icons/si";
 import { Auth } from "./subcomponents/auth";
+import { Container, Row, Col } from "reactstrap";
 import { Machine } from "./subcomponents/machine";
-import { Firestore } from "./subcomponents/firestore";
-import { Database } from "./subcomponents/database";
-import { Storage } from "./subcomponents/storage";
 import { Hosting } from "./subcomponents/hosting";
+import { Storage } from "./subcomponents/storage";
+import { Database } from "./subcomponents/database";
+import { Firestore } from "./subcomponents/firestore";
 import { useModal, Modal } from "react-morphing-modal";
 import "react-morphing-modal/dist/ReactMorphingModal.css";
 
@@ -30,7 +31,7 @@ export const Home = () => {
     <Container fluid={true} className="home-page">
       <Row>
         <Row className="fila">
-          <Auth changeOpacity={changeOpacity} clear={clear}/>
+          <Auth changeOpacity={changeOpacity} clear={clear} />
           <Machine changeOpacity={changeOpacity} />
         </Row>
         <Row className="fila">
@@ -72,7 +73,8 @@ export const Home = () => {
               FIREBASE
             </h1>
             <Modal {...modalProps} className="modal">
-              FIREBASE
+              <div className="vidrio"></div>
+              <HomeContent />
             </Modal>
           </Col>
           <Database changeOpacity={changeOpacity} />

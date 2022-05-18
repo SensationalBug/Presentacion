@@ -1,4 +1,3 @@
-import "./machine.css";
 import { Col } from "reactstrap";
 import React, { useState } from "react";
 import { FaRobot } from "react-icons/fa";
@@ -9,10 +8,10 @@ import "react-morphing-modal/dist/ReactMorphingModal.css";
 
 export const Machine = (props) => {
   const { modalProps, getTriggerProps } = useModal();
-  const { changeOpacity } = props;
   const [textOpacity, setTextOpacity] = useState(0);
   const [iconOpacity, setIconOpacity] = useState(1);
   const [color] = useState("#1c74e8");
+  const { changeOpacity } = props;
 
   return (
     <Col

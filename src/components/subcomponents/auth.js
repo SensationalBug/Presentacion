@@ -2,18 +2,18 @@ import React, { useContext, useEffect, useState } from "react";
 import { UserStateContext } from "../context/userStateContext";
 import "react-morphing-modal/dist/ReactMorphingModal.css";
 import { useModal, Modal } from "react-morphing-modal";
-import { HiUsers } from "react-icons/hi";
 import authImage from "../../images/Auth.svg";
+import { HiUsers } from "react-icons/hi";
 import { Col } from "reactstrap";
 import { Login } from "../login";
 
 export const Auth = (props) => {
   const { modalProps, getTriggerProps } = useModal();
-  const { changeOpacity, clear } = props;
   const { user } = useContext(UserStateContext);
   const [textOpacity, setTextOpacity] = useState(0);
   const [iconOpacity, setIconOpacity] = useState(1);
   const [color, setAuthColor] = useState("#9e3db5");
+  const { changeOpacity, clear } = props;
 
   useEffect(() => {
     if (!user) {
