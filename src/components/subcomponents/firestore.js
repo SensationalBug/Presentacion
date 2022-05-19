@@ -1,4 +1,4 @@
-import { Col } from "reactstrap";
+import { Col, Container } from "reactstrap";
 import React, { useContext, useState } from "react";
 import "../subcomponents/firestore.css";
 import { UserStateContext } from "../context/userStateContext";
@@ -47,10 +47,12 @@ export const Firestore = (props) => {
           <>
             <img alt="..." src={firestoreImage} className="firestore-image" />
             <div className="vidrio"></div>
-            <FirestoreContent user={user}/>
+            <FirestoreContent user={user} />
           </>
         ) : (
-          <></>
+          <Container className="modalbox h-100 text-center">
+            <h1>Favor Loguearse para ver el contenido de esta página.</h1>
+          </Container>
         )}
       </Modal>
     </Col>

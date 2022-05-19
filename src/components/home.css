@@ -4,6 +4,45 @@
 
 .firebase-product {
   display: flex;
-  margin-top: 40px;
   justify-content: space-between;
+  align-items: center;
+}
+
+.set-firebase-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.set-firebase-product label {
+  font-size: 20px;
+}
+
+.container-set-app {
+  background-color: #d6ab29;
+}
+
+.container-upgrade-app {
+  background-color: #a08020;
+}
+
+.container-grow-app {
+  background-color: #776019;
+}
+
+.set-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.set-app div {
+  font-size: 18px;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }

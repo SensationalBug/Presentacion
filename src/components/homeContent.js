@@ -1,7 +1,18 @@
+import { HiUsers, HiOutlineClipboardCheck } from "react-icons/hi";
 import React, { useRef, useState } from "react";
-import { SiFirebase } from "react-icons/si";
-import { AiFillCode } from "react-icons/ai";
+import { SiFirebase, SiGoogleanalytics } from "react-icons/si";
+import { CgDatabase } from "react-icons/cg";
+import { ImLab } from "react-icons/im";
+import { BsFillShareFill } from "react-icons/bs";
+import { TiCloudStorage, TiMessages } from "react-icons/ti";
+import { BiCloudRain, BiWorld, BiRadar } from "react-icons/bi";
+import {
+  AiFillCode,
+  AiOutlineCloudServer,
+  AiOutlineLink,
+} from "react-icons/ai";
 import { IoIosAppstore, IoMdKey } from "react-icons/io";
+import { IoSettings } from "react-icons/io5";
 import { FaArrowUp, FaAndroid, FaUnity, FaCode } from "react-icons/fa";
 import Parallax from "react-springy-parallax";
 import { Col, Row } from "reactstrap";
@@ -17,28 +28,33 @@ export const HomeContent = () => {
   return (
     <Parallax className="all-parallax" ref={parallax} pages={4}>
       <Parallax.Layer offset={0} speed={2} className="all-window">
-        <h1 className="all-title">FIREBASE</h1>
+        <Col className="col-2"></Col>
+        <Col className="col-4">
+          <h1 className="all-title">FIREBASE</h1>
+        </Col>
       </Parallax.Layer>
 
       <Parallax.Layer
         offset={1}
         speed={1}
         style={{
-          opacity: "0.7",
           display: styles.display,
           justifyContent: styles.justifyContent,
           alignItems: styles.alignItems,
         }}
       >
         <Row className="text-center container">
-          <Col className="firebase-text col-6">
+          <Col className="firebase-text col-7">
             <h1 className="text-center">Qué es Firebase?</h1>
             <p className="fs-4 text-justify">
-              Firebase es una plataforma desarrollada por Google para la
-              creación de aplicaciones móviles y web. Originalmente fue una
-              empresa independiente fundada en 2011. En 2014, Google adquirió la
-              plataforma y ahora es su oferta insignia para el desarrollo de
-              aplicaciones.
+              Firebase se trata de una plataforma creada por Google, cuya
+              principal función es desarrollar y facilitar la creación de apps
+              de elevada calidad de una forma rápida, con el fin de que se pueda
+              aumentar la base de usuarios y ganar más dinero. La plataforma
+              está subida en la nube y está disponible para diferente
+              plataformas como iOS, Android y web. Contiene diversas funciones
+              para que cualquier desarrollador pueda combinar y adaptar la
+              plataforma a medida de sus necesidades.
             </p>
           </Col>
         </Row>
@@ -48,7 +64,6 @@ export const HomeContent = () => {
         offset={2}
         speed={1}
         style={{
-          opacity: "0.7",
           display: styles.display,
           justifyContent: styles.justifyContent,
           alignItems: styles.alignItems,
@@ -75,53 +90,60 @@ export const HomeContent = () => {
           display: styles.display,
           justifyContent: styles.justifyContent,
           alignItems: "end",
-          top: "-10vh",
+          top: "-4vh",
         }}
       >
-        <Col className="col-8 firebase-product">
-          <FaAndroid
-            size="5em"
-            color="#00BFA5"
-            className="borde rounded-circle bg-white p-3"
-          />
-          <AiFillCode
-            size="5em"
-            color="#FD8C09"
-            className="borde rounded-circle bg-white p-3"
-          />
-          <IoIosAppstore
-            size="5em"
-            color="#16AACA"
-            className="borde rounded-circle bg-white p-3"
-          />
-          <FaUnity
-            size="5em"
-            color="#000000"
-            className="borde rounded-circle bg-white p-3"
-          />
-          <FaCode
-            size="5em"
-            color="#C52062"
-            className="borde rounded-circle bg-white p-3"
-          />
-          <IoMdKey
-            size="5em"
-            color="#3F51B5"
-            className="borde rounded-circle bg-white p-3"
-          />
+        <Col className="col-9 firebase-product">
+          <Col className="set-firebase-product">
+            <FaAndroid
+              size="5em"
+              color="#00BFA5"
+              className="rounded-circle mb-2 bg-white p-3"
+            />
+            <label>Android</label>
+          </Col>
+          <Col className="set-firebase-product">
+            <AiFillCode
+              size="5em"
+              color="#FD8C09"
+              className="rounded-circle mb-2 bg-white p-3"
+            />
+            <label>C++</label>
+          </Col>
+          <Col className="set-firebase-product">
+            <IoIosAppstore
+              size="5em"
+              color="#16AACA"
+              className="rounded-circle mb-2 bg-white p-3"
+            />
+            <label>IOS</label>
+          </Col>
+          <Col className="set-firebase-product">
+            <FaUnity
+              size="5em"
+              color="#000000"
+              className="rounded-circle mb-2 bg-white p-3"
+            />
+            <label>Unity</label>
+          </Col>
+          <Col className="set-firebase-product">
+            <FaCode
+              size="5em"
+              color="#C52062"
+              className="rounded-circle mb-2 bg-white p-3"
+            />
+            <label>Web</label>
+          </Col>
+          <Col className="set-firebase-product">
+            <IoMdKey
+              size="5em"
+              color="#3F51B5"
+              className="rounded-circle mb-2 bg-white p-3"
+            />
+            <label>Admin Control</label>
+          </Col>
         </Col>
       </Parallax.Layer>
-
-      <Parallax.Layer
-        offset={3}
-        speed={2}
-        style={{
-          opacity: "0.7",
-          display: styles.display,
-          justifyContent: styles.justifyContent,
-          alignItems: styles.alignItems,
-        }}
-      />
 
       <Parallax.Layer
         offset={3}
@@ -130,8 +152,34 @@ export const HomeContent = () => {
           display: styles.display,
         }}
       >
-        <Col className="col-4 py-4">
-          <h3 className="text-center">Compila tu App</h3>
+        <Col className="col-4 py-5 container-set-app text-dar">
+          <h3 className="text-center text-uppercase">Compial tu App</h3>
+          <Col className="set-app">
+            <Col >
+              <label>Cloud Firestore</label>
+              <TiCloudStorage size="2em" />
+            </Col>
+            <Col>
+              <label>Cloud Functions</label>
+              <BiCloudRain size="2em" />
+            </Col>
+            <Col>
+              <label>Authentication</label>
+              <HiUsers size="2em" />
+            </Col>
+            <Col>
+              <label>Hosting</label>
+              <BiWorld size="2em" />
+            </Col>
+            <Col>
+              <label>Cloud Storage</label>
+              <AiOutlineCloudServer size="2em" />
+            </Col>
+            <Col>
+              <label>Database</label>
+              <CgDatabase size="2em" />
+            </Col>
+          </Col>
         </Col>
       </Parallax.Layer>
 
@@ -143,8 +191,24 @@ export const HomeContent = () => {
           justifyContent: styles.justifyContent,
         }}
       >
-        <Col className="col-4 py-4">
-          <h3 className="text-center">Mejora la calidad de tu Web</h3>
+        <Col className="col-4 py-5 container-upgrade-app">
+          <h3 className="text-center text-uppercase">
+            Mejora la calidad de tu Web
+          </h3>
+          <Col className="set-app">
+            <Col>
+              <label>Crashlytics</label>
+              <HiOutlineClipboardCheck size="2em" />
+            </Col>
+            <Col>
+              <label>Performance Monitoring</label>
+              <BiRadar size="2em" />
+            </Col>
+            <Col>
+              <label>Test Lab</label>
+              <IoSettings size="2em" />
+            </Col>
+          </Col>
         </Col>
       </Parallax.Layer>
 
@@ -156,8 +220,30 @@ export const HomeContent = () => {
           flexDirection: "row-reverse",
         }}
       >
-        <Col className="col-4 py-4">
-          <h3 className="text-center">Haz crecer tu negocio</h3>
+        <Col className="col-4 py-5 container-grow-app">
+          <h3 className="text-center text-uppercase">Haz crecer tu negocio</h3>
+          <Col className="set-app">
+            <Col>
+              <label>Analytics</label>
+              <SiGoogleanalytics size="2em" />
+            </Col>
+            <Col>
+              <label>Firebase A/B Testing</label>
+              <ImLab size="2em" />
+            </Col>
+            <Col>
+              <label>Cloud Messaging</label>
+              <TiMessages size="2em" />
+            </Col>
+            <Col>
+              <label>Dynamic Links</label>
+              <AiOutlineLink size="2em" />
+            </Col>
+            <Col>
+              <label>Invites</label>
+              <BsFillShareFill size="2em" />
+            </Col>
+          </Col>
         </Col>
       </Parallax.Layer>
 
@@ -167,9 +253,9 @@ export const HomeContent = () => {
           onClick={() => parallax.current.scrollTo(1)}
           style={{
             position: "absolute",
-            left: "10vw",
-            top: "20vh",
-            color: "#535deb",
+            left: "10%",
+            top: "calc(30vh - 20px)",
+            color: "#039BE5",
           }}
         />
       </Parallax.Layer>
@@ -181,8 +267,8 @@ export const HomeContent = () => {
           style={{
             position: "absolute",
             right: "15vw",
-            top: "30vh",
-            color: "#36AE7C",
+            top: "calc(40vh - 30px)",
+            color: "#2C394B",
           }}
         />
         <SiFirebase
@@ -191,8 +277,8 @@ export const HomeContent = () => {
           style={{
             position: "absolute",
             left: "20vw",
-            top: "110vh",
-            color: "#EB5353",
+            top: "calc(120vh - 25px)",
+            color: "#FF8A65",
           }}
         />
       </Parallax.Layer>
