@@ -1,5 +1,4 @@
 import React from "react";
-import tr from "../../images/TR.png";
 import { Col } from "reactstrap";
 
 export const MachineCard = (props) => {
