@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import './hosting.css'
 import { Col } from "reactstrap";
+import React, { useState } from "react";
 import { BiWorld } from "react-icons/bi";
+import hostingImage from '../../images/Hosting.svg'
 import { useModal, Modal } from "react-morphing-modal";
 import "react-morphing-modal/dist/ReactMorphingModal.css";
+import { HostingContent } from './hostingContent';
 
 export const Hosting = (props) => {
   const { modalProps, getTriggerProps } = useModal();
@@ -39,7 +42,9 @@ export const Hosting = (props) => {
         Hosting
       </p>
       <Modal {...modalProps} className="modal">
-        Hosting
+        <img alt="..." src={hostingImage} className="hosting-image" />
+        <div className="vidrio"></div>
+        <HostingContent/>
       </Modal>
     </Col>
   );

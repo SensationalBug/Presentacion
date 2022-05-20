@@ -7,7 +7,7 @@ import li from "../../images/LI.png";
 import od from "../../images/OD.png";
 import ot from "../../images/OT.png";
 import sr from "../../images/SR.png";
-import { Row } from "reactstrap";
+import { Row, Col } from "reactstrap";
 import React, { useRef } from "react";
 import { MachineCard } from "./machineCard";
 import MIcon1 from "../../images/MIcon1.svg";
@@ -33,7 +33,22 @@ export const MachineContent = () => {
         speed={-0.2}
         style={{ position: "absolute", top: "60%", left: "45vw" }}
       >
-        <img alt="" src={MIcon1} onClick={() => parallax.current.scrollTo(1)} />
+        <Row>
+          <Col className="img-container col-2">
+            <img
+              alt=""
+              className="machine-img pulse"
+              src={MIcon1}
+              onClick={() => parallax.current.scrollTo(1)}
+            />
+            <img
+              alt=""
+              className="machine-img"
+              src={MIcon1}
+              onClick={() => parallax.current.scrollTo(1)}
+            />
+          </Col>
+        </Row>
       </Parallax.Layer>
 
       <Parallax.Layer offset={1} speed={0.4} className="all-arrow-container">

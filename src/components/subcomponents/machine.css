@@ -22,3 +22,30 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+.img-container {
+  display: flex;
+  align-items: center;
+  height: 200px;
+  justify-content: center;
+}
+
+.machine-img {
+  position: absolute;
+  width: 200px;
+}
+
+.pulse {
+  animation: pulsar 0.7s infinite ease-in;
+}
+
+@keyframes pulsar {
+  from {
+    width: 200px;
+    opacity: 0.5;
+  }
+  to {
+    width: 280px;
+    opacity: 0.1;
+  }
+}

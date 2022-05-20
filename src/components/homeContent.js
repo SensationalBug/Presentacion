@@ -153,9 +153,9 @@ export const HomeContent = () => {
         }}
       >
         <Col className="col-4 py-5 container-set-app text-dar">
-          <h3 className="text-center text-uppercase">Compial tu App</h3>
+          <h2 className="text-center text-uppercase">Compila tu App</h2>
           <Col className="set-app">
-            <Col >
+            <Col>
               <label>Cloud Firestore</label>
               <TiCloudStorage size="2em" />
             </Col>
@@ -192,10 +192,10 @@ export const HomeContent = () => {
         }}
       >
         <Col className="col-4 py-5 container-upgrade-app">
-          <h3 className="text-center text-uppercase">
+          <h2 className="text-center text-uppercase">
             Mejora la calidad de tu Web
-          </h3>
-          <Col className="set-app">
+          </h2>
+          <Col className="set-app second">
             <Col>
               <label>Crashlytics</label>
               <HiOutlineClipboardCheck size="2em" />
@@ -221,7 +221,7 @@ export const HomeContent = () => {
         }}
       >
         <Col className="col-4 py-5 container-grow-app">
-          <h3 className="text-center text-uppercase">Haz crecer tu negocio</h3>
+          <h2 className="text-center text-uppercase">Haz crecer tu negocio</h2>
           <Col className="set-app">
             <Col>
               <label>Analytics</label>
@@ -250,11 +250,12 @@ export const HomeContent = () => {
       <Parallax.Layer offset={0} speed={-0.2}>
         <SiFirebase
           size="20em"
+          className="logo-firebase-main"
           onClick={() => parallax.current.scrollTo(1)}
           style={{
             position: "absolute",
             left: "10%",
-            top: "calc(30vh - 20px)",
+            // top: "calc(30vh - 20px)",
             color: "#039BE5",
           }}
         />
@@ -263,21 +264,23 @@ export const HomeContent = () => {
       <Parallax.Layer offset={1} speed={-0.1}>
         <SiFirebase
           size="15em"
+          className="logo-firebase-second"
           onClick={() => parallax.current.scrollTo(2)}
           style={{
             position: "absolute",
             right: "15vw",
-            top: "calc(40vh - 30px)",
+            // top: "calc(40vh - 30px)",
             color: "#2C394B",
           }}
         />
         <SiFirebase
           size="15em"
+          className="logo-firebase-third"
           onClick={() => parallax.current.scrollTo(3)}
           style={{
             position: "absolute",
             left: "20vw",
-            top: "calc(120vh - 25px)",
+            // top: "calc(120vh - 25px)",
             color: "#FF8A65",
           }}
         />
