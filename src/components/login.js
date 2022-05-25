@@ -43,12 +43,18 @@ export const Login = (props) => {
   };
 
   const signIn = () => {
+    const id = toast.loading("Espere por favor...");
     app
       .auth()
       .signInWithEmailAndPassword(email.current.value, password.current.value)
       .then(() => {
         clear(email, password);
-        toast.success("Usuario logueado!");
+        toast.update(id, {
+          render: "Usuario logueado!",
+          type: "success",
+          isLoading: false,
+          autoClose: 2000,
+        });
       })
       .catch((err) => toast.error(`${err}`));
   };

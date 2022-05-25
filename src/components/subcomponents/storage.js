@@ -9,6 +9,7 @@ import "react-morphing-modal/dist/ReactMorphingModal.css";
 import storageImage from "../../images/Storage.svg";
 import { UserStateContext } from "../context/userStateContext";
 import "./storage.css";
+import { ToastContainer, toast } from "react-toastify";
 
 export const Storage = (props) => {
   const { modalProps, getTriggerProps } = useModal();
@@ -42,8 +43,8 @@ export const Storage = (props) => {
       const reference = storage.ref(
         "/images/" + imgPlace.current.files[0].name
       );
+      const id = toast.loading("Espere por favor...");
       const task = reference.put(imgPlace.current.files[0]);
-
       task.then(() => {
         reference.getDownloadURL().then((URL) => {
           database
@@ -56,6 +57,12 @@ export const Storage = (props) => {
               database.collection("users").onSnapshot((querySnapShot) => {
                 querySnapShot.forEach((doc) => {
                   if (doc.id === user.uid) {
+                    toast.update(id, {
+                      render: "Imagen actualizada!",
+                      type: "success",
+                      isLoading: false,
+                      autoClose: 2000,
+                    });
                     setImgURL(doc.data().imgURL);
                   }
                 });
@@ -125,13 +132,14 @@ export const Storage = (props) => {
             </Col>
             <Col className="mx-2 storage-desc">
               {imgURL ? (
-                <img alt="..." src={imgURL} className="user-image" />
+                <img alt="" src={imgURL} className="user-image" />
               ) : (
-                <FaUser size="20em" color="#717171" />
+                <FaUser size="20em" color="#717171" className="p-3 rounded-circle bg-white"/>
               )}
             </Col>
           </Row>
         </Container>
+        <ToastContainer position="top-center" limit={1} />
       </Modal>
     </Col>
   );
