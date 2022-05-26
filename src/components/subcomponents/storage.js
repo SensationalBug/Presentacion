@@ -88,8 +88,7 @@ export const Storage = (props) => {
     >
       <BsFolderFill
         opacity={iconOpacity}
-        className="element"
-        size="10em"
+        className="element storage-icon icon"
         color={color}
       />
       <p

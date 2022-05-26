@@ -31,12 +31,11 @@ export const Auth = (props) => {
       onMouseLeave={() =>
         changeOpacity(iconOpacity, setIconOpacity, textOpacity, setTextOpacity)
       }
-      className="columna col-xl-2 col-12"
+      className="columna col-xl-2  col-12"
     >
       <HiUsers
         opacity={iconOpacity}
-        className="element icon"
-        size="10em"
+        className="element auth-icon icon"
         color={color}
       />
       <p

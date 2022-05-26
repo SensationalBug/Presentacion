@@ -37,7 +37,7 @@ export const MachineContent = () => {
           <Col className="img-container col-2">
             <img
               alt=""
-              className="machine-img pulse"
+              className="machine-img machine-pulse"
               src={MIcon1}
               onClick={() => parallax.current.scrollTo(1)}
             />
@@ -55,11 +55,11 @@ export const MachineContent = () => {
         <FaArrowAltCircleLeft
           onClick={() => parallax.current.scrollTo(0)}
           size="5em"
-          className="p-2 arrow-up"
+          className="p-2"
           style={{
             position: "absolute",
             left: "0",
-            top: "50%",
+            bottom: "50%",
             opacity: "0.5",
           }}
         />
@@ -94,7 +94,7 @@ export const MachineContent = () => {
         <FaArrowAltCircleRight
           onClick={() => parallax.current.scrollTo(2)}
           size="5em"
-          className="p-2 arrow-up"
+          className="p-2"
           style={{
             position: "absolute",
             right: "0",
@@ -108,7 +108,7 @@ export const MachineContent = () => {
         <FaArrowAltCircleLeft
           onClick={() => parallax.current.scrollTo(1)}
           size="5em"
-          className="p-2 arrow-up"
+          className="p-2"
           style={{
             position: "absolute",
             left: "0",
@@ -147,7 +147,7 @@ export const MachineContent = () => {
         <FaArrowAltCircleRight
           onClick={() => parallax.current.scrollTo(0)}
           size="5em"
-          className="p-2 arrow-up"
+          className="p-2"
           style={{
             position: "absolute",
             right: "0",

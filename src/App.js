@@ -199,7 +199,7 @@ const App = () => {
 
   return (
     <UserStateProvider>
-      <div>
+      <div className="All">
         <canvas ref={canvasRef} className="canvas position-absolute"></canvas>
         <Home />
       </div>

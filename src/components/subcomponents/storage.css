@@ -1,3 +1,8 @@
+.storage{
+  position: relative;
+  top: -10vh;
+}
+
 .storage-container {
   position: absolute;
   top: 0;

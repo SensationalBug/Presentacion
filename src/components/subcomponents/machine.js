@@ -25,8 +25,7 @@ export const Machine = (props) => {
     >
       <FaRobot
         opacity={iconOpacity}
-        className="element"
-        size="10em"
+        className="element machine-icon icon"
         color={color}
       />
       <p
@@ -38,7 +37,7 @@ export const Machine = (props) => {
         }}
         className="btn element texto"
       >
-        Machine Learning
+        ML
       </p>
       <Modal {...modalProps} className="modal">
         <img alt="..." src={machineImage} className="storage-image" />

@@ -1,3 +1,8 @@
+.machine{
+  position: relative;
+  top: -10vh;
+}
+
 .machine-content {
   display: flex;
   align-items: center;
@@ -35,11 +40,11 @@
   width: 200px;
 }
 
-.pulse {
-  animation: pulsar 0.7s infinite ease-in;
+.machine-pulse {
+  animation: pulso 0.7s infinite ease-in;
 }
 
-@keyframes pulsar {
+@keyframes pulso {
   from {
     width: 200px;
     opacity: 0.5;

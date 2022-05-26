@@ -22,12 +22,11 @@ export const Hosting = (props) => {
       onMouseLeave={() =>
         changeOpacity(iconOpacity, setIconOpacity, textOpacity, setTextOpacity)
       }
-      className="columna col-xl-2 col-12"
+      className="columna hosting col-xl-2 col-12"
     >
       <BiWorld
         opacity={iconOpacity}
-        className="element"
-        size="10em"
+        className="element hosting-ico icon"
         color={color}
       />
       <p

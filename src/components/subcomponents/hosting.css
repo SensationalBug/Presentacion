@@ -1,3 +1,8 @@
+.hosting{
+  position: relative;
+  top: 10vh;
+}
+
 .hosting-image {
   position: absolute;
   left: 0;
@@ -35,7 +40,8 @@
   animation: pulse 1s infinite ease-out;
 }
 
-.hosting-function {
+.hosting-function,
+.hosting-last-page {
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -49,11 +55,16 @@
 }
 
 .hosting-last {
-  height: 25vh;
-  width: 40vw;
-  padding: 15vh 0px;
-  margin: 0px 10px;
+  height: 27%;
+  width: 40%;
+  margin: 15px;
   transition: 700ms;
+}
+
+.hosting-last h2 {
+  left: -4%;
+  top: -5%;
+  position: relative;
 }
 
 .arrows {

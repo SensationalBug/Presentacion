@@ -286,14 +286,14 @@ export const HomeContent = () => {
         />
       </Parallax.Layer>
 
-      <Parallax.Layer offset={3} speed={-0.2} className="all-arrow-container">
+      <Parallax.Layer offset={4} speed={-0.2} className="all-arrow-container">
         <FaArrowUp
           onClick={() => parallax.current.scrollTo(0)}
           size="3em"
-          className="rounded-circle bg-dark p-2 arrow-up"
+          className="rounded-circle bg-dark p-2"
           style={{
             position: "absolute",
-            bottom: "-15",
+            top: "10vh",
             opacity: "0.6",
           }}
         />

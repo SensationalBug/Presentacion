@@ -6,7 +6,6 @@ import { Container, Row, Col } from "reactstrap";
 import { Machine } from "./subcomponents/machine";
 import { Hosting } from "./subcomponents/hosting";
 import { Storage } from "./subcomponents/storage";
-import { Database } from "./subcomponents/database";
 import { Firestore } from "./subcomponents/firestore";
 import { useModal, Modal } from "react-morphing-modal";
 import "react-morphing-modal/dist/ReactMorphingModal.css";
@@ -29,60 +28,56 @@ export const Home = () => {
 
   return (
     <Container fluid={true} className="home-page">
-      <Row>
-        <Row className="fila">
-          <Auth changeOpacity={changeOpacity} clear={clear} />
-          <Machine changeOpacity={changeOpacity} />
-        </Row>
-        <Row className="fila">
-          <Firestore changeOpacity={changeOpacity} />
-          <Col
-            onMouseEnter={() =>
-              changeOpacity(
-                iconOpacity,
-                setIconOpacity,
-                textOpacity,
-                setTextOpacity
-              )
-            }
-            onMouseLeave={() =>
-              changeOpacity(
-                iconOpacity,
-                setIconOpacity,
-                textOpacity,
-                setTextOpacity
-              )
-            }
-            className="columna col-xl-2 col-12"
+      <Row className="fila ">
+        <Col
+          onMouseEnter={() =>
+            changeOpacity(
+              iconOpacity,
+              setIconOpacity,
+              textOpacity,
+              setTextOpacity
+            )
+          }
+          onMouseLeave={() =>
+            changeOpacity(
+              iconOpacity,
+              setIconOpacity,
+              textOpacity,
+              setTextOpacity
+            )
+          }
+          className="columna col-one col-2 mt-5"
+        >
+          <SiFirebase
+            opacity={iconOpacity}
+            className="element main"
+            color={color}
+          />
+          <h1
+            {...getTriggerProps()}
+            style={{
+              opacity: textOpacity,
+              color: "#ffffff",
+              backgroundColor: color,
+            }}
+            className="btn element firebase texto"
           >
-            <SiFirebase
-              opacity={iconOpacity}
-              className="element main"
-              size="15em"
-              color={color}
-            />
-            <h1
-              {...getTriggerProps()}
-              style={{
-                opacity: textOpacity,
-                color: "#ffffff",
-                backgroundColor: color,
-              }}
-              className="btn element firebase texto"
-            >
-              FIREBASE
-            </h1>
-            <Modal {...modalProps} className="modal">
-              <div className="vidrio"></div>
-              <HomeContent />
-            </Modal>
-          </Col>
-          <Database changeOpacity={changeOpacity} />
-        </Row>
-        <Row className="fila">
-          <Storage changeOpacity={changeOpacity} />
+            FIREBASE
+          </h1>
+          <Modal {...modalProps} className="modal">
+            <div className="vidrio"></div>
+            <HomeContent />
+          </Modal>
+        </Col>
+        <Col className="col-two col-10">
+          <Auth changeOpacity={changeOpacity} clear={clear} />
+          <Firestore changeOpacity={changeOpacity} />
+        </Col>
+        <Col className="col-three col-6">
+          <Machine changeOpacity={changeOpacity} />
           <Hosting changeOpacity={changeOpacity} />
-        </Row>
+          <Storage changeOpacity={changeOpacity} />
+        </Col>
       </Row>
     </Container>
   );

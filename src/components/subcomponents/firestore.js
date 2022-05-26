@@ -27,8 +27,7 @@ export const Firestore = (props) => {
     >
       <RiDatabase2Fill
         opacity={iconOpacity}
-        className="element"
-        size="10em"
+        className="element firestore-icon icon"
         color={color}
       />
       <p
@@ -40,7 +39,7 @@ export const Firestore = (props) => {
         }}
         className="btn element texto"
       >
-        Firestore Database
+        Firestore
       </p>
       <Modal {...modalProps} className="modal">
         {user ? (

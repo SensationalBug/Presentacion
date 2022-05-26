@@ -135,35 +135,69 @@ export const HostingContent = () => {
         <Row
           className="hosting-function"
           style={{
-            opacity: showSecondOpacity,
+            opacity: showFirstOpacity,
             position: "absolute",
             justifyContent: "center",
             alignItems: "center",
             display: "flex",
             width: "100%",
-            fontSize: "80px"
+            fontSize: "80px",
           }}
         >
           <p className="text-center">Cómo se configura?</p>
         </Row>
-        <Row className="hosting-function" style={{ opacity: showFirstOpacity }}>
+        <Row
+          className="hosting-last-page"
+          style={{ opacity: showSecondOpacity }}
+        >
           <Col className="hosting-last bg-dark col-6 rounded">
-            <p className="fs-4 text-justify"></p>
+            <h2 className="text-center bg-white text-dark rounded">1</h2>
+            <p className="fs-4 text-justify">
+              Nos dirigimos a la parte de Firebase Hosting en la consola de
+              nuestro proyecto y hacemos click en
+              <i className="text-info"> Get Started.</i>
+            </p>
           </Col>
           <Col className="hosting-last bg-dark col-6 rounded">
-            <p className="fs-4 text-justify"></p>
+            <h2 className="text-center bg-white text-dark rounded">2</h2>
+            <p className="fs-4 text-justify">
+              Se abrirá una ventana de Set up la cual indacará que instalemos el
+              CLI de firebase con el comando:
+              <p className="text-info">npm install -g firebase-tools</p>
+            </p>
           </Col>
           <Col className="hosting-last bg-dark col-6 rounded">
-            <p className="fs-4 text-justify"></p>
+            <h2 className="text-center bg-white text-dark rounded">3</h2>
+            <p className="fs-5 text-justify">
+              Debemos hacer login e iniciar el proceso con los comandos
+              <i className="text-info"> firebase login</i> y
+              <i className="text-info"> firebase init </i>
+              en la consola de windows desde el directorio de nuestro proyecto.
+            </p>
           </Col>
           <Col className="hosting-last bg-dark col-6 rounded">
-            <p className="fs-4 text-justify"></p>
+            <h2 className="text-center bg-white text-dark rounded">4</h2>
+            <p className="fs-4 text-justify">
+              En la lista de opciones seleccionamos la de{" "}
+              <i className="text-info">Hosting</i>, luego seleccionamos la
+              opción de usar un proyecto existente.
+            </p>
           </Col>
           <Col className="hosting-last bg-dark col-6 rounded">
-            <p className="fs-4 text-justify"></p>
+            <h2 className="text-center bg-white text-dark rounded">5</h2>
+            <p className="fs-4 text-justify">
+              Tenemos la opción de redireccionar todas las url al{" "}
+              <i className="text-info">Index.html</i> y tambien la de hacer los
+              deploys automaticos a <i className="text-info">Github</i> (implica
+              logueo en github).
+            </p>
           </Col>
           <Col className="hosting-last bg-dark col-6 rounded">
-            <p className="fs-4 text-justify"></p>
+            <h2 className="text-center bg-white text-dark rounded">6</h2>
+            <p className="fs-4 text-justify">
+              Hacemos el deploy de nuestra aplicación con el comando{" "}
+              <i className="text-info">firebase deploy</i>.
+            </p>
           </Col>
         </Row>
       </Parallax.Layer>
