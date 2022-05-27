@@ -1,22 +1,22 @@
+import { FaArrowUp, FaAndroid, FaUnity, FaCode } from "react-icons/fa";
 import { HiUsers, HiOutlineClipboardCheck } from "react-icons/hi";
-import React, { useRef, useState } from "react";
 import { SiFirebase, SiGoogleanalytics } from "react-icons/si";
+import { BiCloudRain, BiWorld, BiRadar } from "react-icons/bi";
+import { TiCloudStorage, TiMessages } from "react-icons/ti";
+import { IoIosAppstore, IoMdKey } from "react-icons/io";
+import { BsFillShareFill } from "react-icons/bs";
+import React, { useRef, useState } from "react";
+import Parallax from "react-springy-parallax";
+import { IoSettings } from "react-icons/io5";
 import { CgDatabase } from "react-icons/cg";
 import { ImLab } from "react-icons/im";
-import { BsFillShareFill } from "react-icons/bs";
-import { TiCloudStorage, TiMessages } from "react-icons/ti";
-import { BiCloudRain, BiWorld, BiRadar } from "react-icons/bi";
-import {
-  AiFillCode,
-  AiOutlineCloudServer,
-  AiOutlineLink,
-} from "react-icons/ai";
-import { IoIosAppstore, IoMdKey } from "react-icons/io";
-import { IoSettings } from "react-icons/io5";
-import { FaArrowUp, FaAndroid, FaUnity, FaCode } from "react-icons/fa";
-import Parallax from "react-springy-parallax";
 import { Col, Row } from "reactstrap";
 import "./home.css";
+import {
+  AiOutlineCloudServer,
+  AiOutlineLink,
+  AiFillCode,
+} from "react-icons/ai";
 
 export const HomeContent = () => {
   const parallax = useRef();

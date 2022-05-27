@@ -1,12 +1,12 @@
-import { Col, Container } from "reactstrap";
-import React, { useContext, useState } from "react";
-import "../subcomponents/firestore.css";
 import { UserStateContext } from "../context/userStateContext";
-import { RiDatabase2Fill } from "react-icons/ri";
-import { FirestoreContent } from "./firestoreContent";
-import { useModal, Modal } from "react-morphing-modal";
-import firestoreImage from "../../images/Firestore.svg";
 import "react-morphing-modal/dist/ReactMorphingModal.css";
+import firestoreImage from "../../images/Firestore.svg";
+import { useModal, Modal } from "react-morphing-modal";
+import { FirestoreContent } from "./firestoreContent";
+import React, { useContext, useState } from "react";
+import { RiDatabase2Fill } from "react-icons/ri";
+import { Col, Container } from "reactstrap";
+import "../subcomponents/firestore.css";
 
 export const Firestore = (props) => {
   const { user } = useContext(UserStateContext);

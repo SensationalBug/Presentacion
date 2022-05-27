@@ -1,4 +1,4 @@
-.storage{
+.storage {
   position: relative;
   top: -10vh;
 }
@@ -6,6 +6,10 @@
 .storage-container {
   position: absolute;
   top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .storage-image {

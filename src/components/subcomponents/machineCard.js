@@ -1,5 +1,5 @@
-import React from "react";
 import { Col } from "reactstrap";
+import React from "react";
 
 export const MachineCard = (props) => {
   const { title, content, link, img } = props;

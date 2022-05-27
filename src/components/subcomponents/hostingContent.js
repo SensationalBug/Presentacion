@@ -1,7 +1,7 @@
+import { BiWorld, BiDownArrowAlt, BiUpArrowAlt, BiNetworkChart } from "react-icons/bi";
 import React, { useRef, useState } from "react";
 import Parallax from "react-springy-parallax";
 import { Col, Row } from "reactstrap";
-import { BiWorld, BiDownArrowAlt, BiUpArrowAlt } from "react-icons/bi";
 
 export const HostingContent = () => {
   const parallax = useRef();
@@ -94,8 +94,8 @@ export const HostingContent = () => {
       <Parallax.Layer offset={2} speed={0.2}>
         <Row className="hosting-function">
           <Col className="col-4">
-            <BiWorld size="35em" className="hosting-third-icon pulse" />
-            <BiWorld size="30em" className="hosting-third-icon " />
+            <BiNetworkChart size="35em" className="hosting-third-icon pulse" />
+            <BiNetworkChart size="30em" className="hosting-third-icon " />
           </Col>
           <Col className="firebase-text col-6">
             <h1 className="text-center">Cómo funciona una CDN?</h1>

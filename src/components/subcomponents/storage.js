@@ -1,17 +1,19 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { Col, Container, Row } from "reactstrap";
-import { BsFolderFill } from "react-icons/bs";
-import { MdCloudUpload } from "react-icons/md";
-import { FaUser } from "react-icons/fa";
-import { useModal, Modal } from "react-morphing-modal";
+import { UserStateContext } from "../context/userStateContext";
+import { MdCloudUpload, MdStorage } from "react-icons/md";
 import { app } from "../../firebaseConfig/firebaseConfig";
 import "react-morphing-modal/dist/ReactMorphingModal.css";
-import storageImage from "../../images/Storage.svg";
-import { UserStateContext } from "../context/userStateContext";
-import "./storage.css";
+import { useModal, Modal } from "react-morphing-modal";
 import { ToastContainer, toast } from "react-toastify";
+import storageImage from "../../images/Storage.svg";
+import { BsFolderFill } from "react-icons/bs";
+import Parallax from 'react-springy-parallax'
+import { FaUser } from "react-icons/fa";
+import { Col, Row } from "reactstrap";
+import "./storage.css";
 
 export const Storage = (props) => {
+  const parallax = useRef()
   const { modalProps, getTriggerProps } = useModal();
   const { changeOpacity } = props;
   const { user } = useContext(UserStateContext);
@@ -105,40 +107,62 @@ export const Storage = (props) => {
       <Modal {...modalProps} className="modal">
         <img alt="..." src={storageImage} className="storage-image" />
         <div className="vidrio"></div>
-        <Container className="storage-container">
-          <Row className="storage-col">
-            <Col className="mx-2 storage-desc">
-              <h1 className="text-center">Cloud Storage</h1>
-              <p className="all-desc my-4">
-                Cloud Storage para Firebase es un servicio de almacenamiento de
-                objetos potente, simple y rentable construido para el
-                escalamiento de Google. Los SDK de Firebase para Cloud Storage
-                agregan la seguridad de Google a las operaciones de carga y
-                descarga de archivos de tus apps de Firebase, sin importar la
-                calidad de la red.
-              </p>
-              <div className="button-group">
-                <input
-                  className="form-control"
-                  type="file"
-                  ref={imgPlace}
-                  accept="image/*"
-                />
-                <button onClick={file} className="btn btn-success ">
-                  <MdCloudUpload size="3em" />
-                </button>
-              </div>
+        <Parallax
+          className="all-parallax"
+          ref={parallax}
+          pages={2}
+        >
+          <Parallax.Layer offset={0} speed={0.2}>
+            <Col className="main-icon col-5">
+              <MdStorage
+                size="50%"
+                className="text-dark anime-storage-icon"
+              />
             </Col>
-            <Col className="mx-2 storage-desc">
-              {imgURL ? (
-                <img alt="" src={imgURL} className="user-image" />
-              ) : (
-                <FaUser size="20em" color="#717171" className="p-3 rounded-circle bg-white"/>
-              )}
-            </Col>
-          </Row>
-        </Container>
-        <ToastContainer position="top-center" limit={1} />
+          </Parallax.Layer>
+
+          <Parallax.Layer offset={0} speed={2} className="all-window">
+            <h1 className="all-title hosting-title" onClick={() => parallax.current.scrollTo(1)}>STORAGE</h1>
+          </Parallax.Layer>
+
+          <Parallax.Layer offset={1} speed={0.4}>
+            <div className="storage-container">
+              <Row className="storage-col">
+                <Col className="px-5 storage-desc">
+                  <h1 className="text-center">Cloud Storage</h1>
+                  <p className="all-desc my-4">
+                    Cloud Storage para Firebase es un servicio de almacenamiento de
+                    objetos potente, simple y rentable construido para el
+                    escalamiento de Google. Los SDK de Firebase para Cloud Storage
+                    agregan la seguridad de Google a las operaciones de carga y
+                    descarga de archivos de tus apps de Firebase, sin importar la
+                    calidad de la red.
+                  </p>
+                  <div className="button-group">
+                    <input
+                      className="form-control"
+                      type="file"
+                      ref={imgPlace}
+                      accept="image/*"
+                    />
+                    <button onClick={file} className="btn btn-success ">
+                      <MdCloudUpload size="3em" />
+                    </button>
+                  </div>
+                </Col>
+                <Col className="px-5 storage-desc">
+                  {imgURL ? (
+                    <img alt="" src={imgURL} className="user-image" />
+                  ) : (
+                    <FaUser size="20em" color="#717171" className="p-3 rounded-circle bg-white" />
+                  )}
+                </Col>
+              </Row>
+            </div>
+            <ToastContainer position="top-center" limit={1} />
+          </Parallax.Layer>
+        </Parallax>
+
       </Modal>
     </Col>
   );

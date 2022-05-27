@@ -1,11 +1,11 @@
-import './hosting.css'
-import { Col } from "reactstrap";
-import React, { useState } from "react";
-import { BiWorld } from "react-icons/bi";
-import hostingImage from '../../images/Hosting.svg'
-import { useModal, Modal } from "react-morphing-modal";
 import "react-morphing-modal/dist/ReactMorphingModal.css";
+import { useModal, Modal } from "react-morphing-modal";
+import hostingImage from '../../images/Hosting.svg'
 import { HostingContent } from './hostingContent';
+import { BiWorld } from "react-icons/bi";
+import React, { useState } from "react";
+import { Col } from "reactstrap";
+import './hosting.css'
 
 export const Hosting = (props) => {
   const { modalProps, getTriggerProps } = useModal();

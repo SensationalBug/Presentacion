@@ -1,7 +1,7 @@
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Home } from "./components/home";
 import { useEffect, useRef } from "react";
+import { Home } from "./components/home";
+import "./App.css";
 
 import UserStateProvider from "./components/context/userStateContext";
 

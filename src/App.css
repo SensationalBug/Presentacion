@@ -1,4 +1,4 @@
-.All{
+.All {
   font-family: "Archivo", sans-serif;
 }
 
@@ -122,6 +122,7 @@
   .columna .icon {
     font-size: 15em;
   }
+
   .columna .main {
     font-size: 20em;
   }
@@ -131,7 +132,74 @@
   0% {
     top: 0px;
   }
+
   100% {
     top: 15px;
   }
+}
+
+/* ANIMACIONES AUTH, STORAGE Y FIRESTORE */
+
+.anime-auth-icon {
+  position: absolute;
+  animation: auth-move 10s infinite alternate linear;
+}
+
+@keyframes auth-move {
+  0% {
+    left: 0vh;
+  }
+
+  15% {
+    opacity: 0;
+  }
+
+  50% {
+    left: 50vh;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.8;
+    left: 100vh;
+  }
+}
+
+.anime-firestore-icon {
+  position: absolute;
+  top: -50vh;
+  animation: firestore-move 10s infinite alternate linear;
+}
+
+@keyframes firestore-move {
+  0% {
+    top: -50vh;
+  }
+
+  90% {
+    top: 30vh;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
+
+.anime-storage-icon {
+  animation: storage-move 1s infinite ease-out;
+}
+
+@keyframes storage-move {
+  from {
+    width: 50%;
+    opacity: 0.5;
+  }
+
+  to {
+    width: 60%;
+    opacity: 0;
+  }
+
 }

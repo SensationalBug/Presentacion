@@ -59,7 +59,7 @@ export const MachineContent = () => {
           style={{
             position: "absolute",
             left: "0",
-            bottom: "50%",
+            top: "50%",
             opacity: "0.5",
           }}
         />
