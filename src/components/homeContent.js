@@ -255,7 +255,6 @@ export const HomeContent = () => {
           style={{
             position: "absolute",
             left: "10%",
-            // top: "calc(30vh - 20px)",
             color: "#039BE5",
           }}
         />
@@ -269,7 +268,6 @@ export const HomeContent = () => {
           style={{
             position: "absolute",
             right: "15vw",
-            // top: "calc(40vh - 30px)",
             color: "#2C394B",
           }}
         />
@@ -280,7 +278,6 @@ export const HomeContent = () => {
           style={{
             position: "absolute",
             left: "20vw",
-            // top: "calc(120vh - 25px)",
             color: "#FF8A65",
           }}
         />
