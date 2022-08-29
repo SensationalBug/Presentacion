@@ -21,7 +21,7 @@ export const Machine = (props) => {
       onMouseLeave={() =>
         changeOpacity(iconOpacity, setIconOpacity, textOpacity, setTextOpacity)
       }
-      className="columna col-xl-2 col-12"
+      className="columna col-lg-2 col"
     >
       <FaRobot
         opacity={iconOpacity}
@@ -40,7 +40,7 @@ export const Machine = (props) => {
         ML
       </p>
       <Modal {...modalProps} className="modal">
-        <img alt="..." src={machineImage} className="storage-image" />
+        <img alt="..." src={machineImage} className="components-image" />
         <div className="vidrio"></div>
         <MachineContent />
       </Modal>

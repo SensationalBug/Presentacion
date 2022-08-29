@@ -87,7 +87,7 @@ export const FirestoreContent = (props) => {
       <Parallax.Layer offset={1} speed={0.4}>
         <div className="firestore-container">
           <Row className="firestore-box mx-5">
-            <Col className="firestore-content col-md-6 col-lg-6 col">
+            <Col className="firestore-content col-lg-6 col-12">
               <h1 className="text-center">Firebase Firestore</h1>
               <p className="all-desc my-4">
                 Cloud Firestore es una base de datos flexible y escalable para el
@@ -100,7 +100,7 @@ export const FirestoreContent = (props) => {
                 o la conectividad a Internet.
               </p>
             </Col>
-            <Col className="firestore-form col-md-6 col-lg-12 col-10">
+            <Col className="firestore-form col-lg-6 col-lg-12 col-12">
               <Table className="table text-white">
                 <thead>
                   <tr>

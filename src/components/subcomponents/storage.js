@@ -7,13 +7,13 @@ import { useModal, Modal } from "react-morphing-modal";
 import { ToastContainer, toast } from "react-toastify";
 import storageImage from "../../images/Storage.svg";
 import { BsFolderFill } from "react-icons/bs";
-import Parallax from 'react-springy-parallax'
+import Parallax from "react-springy-parallax";
 import { FaUser } from "react-icons/fa";
 import { Col, Row } from "reactstrap";
 import "./storage.css";
 
 export const Storage = (props) => {
-  const parallax = useRef()
+  const parallax = useRef();
   const { modalProps, getTriggerProps } = useModal();
   const { changeOpacity } = props;
   const { user } = useContext(UserStateContext);
@@ -86,7 +86,7 @@ export const Storage = (props) => {
       onMouseLeave={() =>
         changeOpacity(iconOpacity, setIconOpacity, textOpacity, setTextOpacity)
       }
-      className="columna col-xl-2 col-12"
+      className="columna col-lg-2 col"
     >
       <BsFolderFill
         opacity={iconOpacity}
@@ -105,38 +105,36 @@ export const Storage = (props) => {
         Storage
       </p>
       <Modal {...modalProps} className="modal">
-        <img alt="..." src={storageImage} className="storage-image" />
+        <img alt="..." src={storageImage} className="components-image" />
         <div className="vidrio"></div>
-        <Parallax
-          className="all-parallax"
-          ref={parallax}
-          pages={2}
-        >
+        <Parallax className="all-parallax" ref={parallax} pages={2}>
           <Parallax.Layer offset={0} speed={0.2}>
             <Col className="main-icon col-5">
-              <MdStorage
-                size="50%"
-                className="text-dark anime-storage-icon"
-              />
+              <MdStorage size="50%" className="text-dark anime-storage-icon" />
             </Col>
           </Parallax.Layer>
 
           <Parallax.Layer offset={0} speed={2} className="all-window">
-            <h1 className="all-title hosting-title" onClick={() => parallax.current.scrollTo(1)}>STORAGE</h1>
+            <h1
+              className="all-title hosting-title"
+              onClick={() => parallax.current.scrollTo(1)}
+            >
+              STORAGE
+            </h1>
           </Parallax.Layer>
 
           <Parallax.Layer offset={1} speed={0.4}>
             <div className="storage-container">
               <Row className="storage-col">
-                <Col className="px-5 storage-desc">
+                <Col className="px-5 col-12 col-lg-6 storage-desc">
                   <h1 className="text-center">Cloud Storage</h1>
                   <p className="all-desc my-4">
-                    Cloud Storage para Firebase es un servicio de almacenamiento de
-                    objetos potente, simple y rentable construido para el
-                    escalamiento de Google. Los SDK de Firebase para Cloud Storage
-                    agregan la seguridad de Google a las operaciones de carga y
-                    descarga de archivos de tus apps de Firebase, sin importar la
-                    calidad de la red.
+                    Cloud Storage para Firebase es un servicio de almacenamiento
+                    de objetos potente, simple y rentable construido para el
+                    escalamiento de Google. Los SDK de Firebase para Cloud
+                    Storage agregan la seguridad de Google a las operaciones de
+                    carga y descarga de archivos de tus apps de Firebase, sin
+                    importar la calidad de la red.
                   </p>
                   <div className="button-group">
                     <input
@@ -150,11 +148,15 @@ export const Storage = (props) => {
                     </button>
                   </div>
                 </Col>
-                <Col className="px-5 storage-desc">
+                <Col className="col-12 col-lg-6 user-image-container">
                   {imgURL ? (
                     <img alt="" src={imgURL} className="user-image" />
                   ) : (
-                    <FaUser size="20em" color="#717171" className="p-3 rounded-circle bg-white" />
+                    <FaUser
+                      size="20em"
+                      color="#717171"
+                      className="p-3 rounded-circle bg-white"
+                    />
                   )}
                 </Col>
               </Row>
@@ -162,7 +164,6 @@ export const Storage = (props) => {
             <ToastContainer position="top-center" limit={1} />
           </Parallax.Layer>
         </Parallax>
-
       </Modal>
     </Col>
   );

@@ -101,7 +101,7 @@ export const Login = (props) => {
           <h1 className="text-center">Firebase Authentication</h1>
           <Row className="auth-box">
             <Col className="auth-content col-md-6 col-lg-6 col">
-              <p className="all-desc rounded p-2 my-4">
+              <p className="all-desc rounded p-2 m-4">
                 Firebase Authentication proporciona servicios de backend, SDK
                 fáciles de usar y bibliotecas de interfaz de usuario listas para
                 usar para autenticar a los usuarios en su aplicación. Admite la

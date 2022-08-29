@@ -28,52 +28,54 @@ export const Home = () => {
 
   return (
     <Container fluid={true} className="home-page">
-      <Row className="fila ">
-        <Col
-          onMouseEnter={() =>
-            changeOpacity(
-              iconOpacity,
-              setIconOpacity,
-              textOpacity,
-              setTextOpacity
-            )
-          }
-          onMouseLeave={() =>
-            changeOpacity(
-              iconOpacity,
-              setIconOpacity,
-              textOpacity,
-              setTextOpacity
-            )
-          }
-          className="columna col-one col-2 mt-5"
-        >
-          <SiFirebase
-            opacity={iconOpacity}
-            className="element main"
-            color={color}
-          />
-          <h1
-            {...getTriggerProps()}
-            style={{
-              opacity: textOpacity,
-              color: "#ffffff",
-              backgroundColor: color,
-            }}
-            className="btn element firebase texto"
+      <Row className="fila">
+        <Col className="col-one col-lg-2 col-8 mt-5">
+          <Col
+            onMouseEnter={() =>
+              changeOpacity(
+                iconOpacity,
+                setIconOpacity,
+                textOpacity,
+                setTextOpacity
+              )
+            }
+            onMouseLeave={() =>
+              changeOpacity(
+                iconOpacity,
+                setIconOpacity,
+                textOpacity,
+                setTextOpacity
+              )
+            }
+            className="columna col-xl-2  col-12"
           >
-            FIREBASE
-          </h1>
-          <Modal {...modalProps} className="modal">
-            <div className="vidrio"></div>
-            <HomeContent />
-          </Modal>
+            <SiFirebase
+              opacity={iconOpacity}
+              className="element main"
+              color={color}
+            />
+            <h1
+              {...getTriggerProps()}
+              style={{
+                opacity: textOpacity,
+                color: "#ffffff",
+                backgroundColor: color,
+              }}
+              className="btn element firebase texto"
+            >
+              FIREBASE
+            </h1>
+            <Modal {...modalProps} className="modal">
+              <div className="vidrio"></div>
+              <HomeContent />
+            </Modal>
+          </Col>
         </Col>
-        <Col className="col-two col-10">
+        <Col className="col-two col-lg-10 col-8">
           <Auth changeOpacity={changeOpacity} clear={clear} />
           <Firestore changeOpacity={changeOpacity} />
         </Col>
-        <Col className="col-three col-6">
+        <Col className="col-three col-lg-6 col-8">
           <Machine changeOpacity={changeOpacity} />
           <Hosting changeOpacity={changeOpacity} />
           <Storage changeOpacity={changeOpacity} />

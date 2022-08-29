@@ -55,7 +55,7 @@ export const MachineContent = () => {
         <FaArrowAltCircleLeft
           onClick={() => parallax.current.scrollTo(0)}
           size="5em"
-          className="p-2"
+          className="p-2 arrow"
           style={{
             position: "absolute",
             left: "0",
@@ -94,7 +94,7 @@ export const MachineContent = () => {
         <FaArrowAltCircleRight
           onClick={() => parallax.current.scrollTo(2)}
           size="5em"
-          className="p-2"
+          className="p-2 arrow"
           style={{
             position: "absolute",
             right: "0",
@@ -108,7 +108,7 @@ export const MachineContent = () => {
         <FaArrowAltCircleLeft
           onClick={() => parallax.current.scrollTo(1)}
           size="5em"
-          className="p-2"
+          className="p-2 arrow"
           style={{
             position: "absolute",
             left: "0",
@@ -147,7 +147,7 @@ export const MachineContent = () => {
         <FaArrowAltCircleRight
           onClick={() => parallax.current.scrollTo(0)}
           size="5em"
-          className="p-2"
+          className="p-2 arrow"
           style={{
             position: "absolute",
             right: "0",

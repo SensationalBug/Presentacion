@@ -1,4 +1,9 @@
-import { BiWorld, BiDownArrowAlt, BiUpArrowAlt, BiNetworkChart } from "react-icons/bi";
+import {
+  BiWorld,
+  BiDownArrowAlt,
+  BiUpArrowAlt,
+  BiNetworkChart,
+} from "react-icons/bi";
 import React, { useRef, useState } from "react";
 import Parallax from "react-springy-parallax";
 import { Col, Row } from "reactstrap";
@@ -51,7 +56,7 @@ export const HostingContent = () => {
         }}
       >
         <Row className="text-center container justify-content-end">
-          <Col className="firebase-text col-7">
+          <Col className="firebase-text col-lg-7 col-12">
             <h1 className="text-center">Qué es?</h1>
             <p className="fs-4">
               Firebase Hosting es alojamiento de contenido web de nivel de
@@ -97,9 +102,9 @@ export const HostingContent = () => {
             <BiNetworkChart size="35em" className="hosting-third-icon pulse" />
             <BiNetworkChart size="30em" className="hosting-third-icon " />
           </Col>
-          <Col className="firebase-text col-6">
+          <Col className="firebase-text col-lg-6 col-11 mx-2 cdn-text">
             <h1 className="text-center">Cómo funciona una CDN?</h1>
-            <p className="fs-4">
+            <p className="main-text">
               El proceso de acceso al contenido almacenado en caché en una
               ubicación de borde de red CDN es casi siempre transparente para el
               usuario. El software de administración de CDN calcula
@@ -152,7 +157,7 @@ export const HostingContent = () => {
         >
           <Col className="hosting-last bg-dark col-6 rounded">
             <h2 className="text-center bg-white text-dark rounded">1</h2>
-            <p className="fs-4 text-justify">
+            <p className="text-justify">
               Nos dirigimos a la parte de Firebase Hosting en la consola de
               nuestro proyecto y hacemos click en
               <i className="text-info"> Get Started.</i>
@@ -160,7 +165,7 @@ export const HostingContent = () => {
           </Col>
           <Col className="hosting-last bg-dark col-6 rounded">
             <h2 className="text-center bg-white text-dark rounded">2</h2>
-            <p className="fs-4 text-justify">
+            <p className="text-justify">
               Se abrirá una ventana de Set up la cual indacará que instalemos el
               CLI de firebase con el comando:
               <p className="text-info">npm install -g firebase-tools</p>
@@ -168,7 +173,7 @@ export const HostingContent = () => {
           </Col>
           <Col className="hosting-last bg-dark col-6 rounded">
             <h2 className="text-center bg-white text-dark rounded">3</h2>
-            <p className="fs-5 text-justify">
+            <p className="text-justify">
               Debemos hacer login e iniciar el proceso con los comandos
               <i className="text-info"> firebase login</i> y
               <i className="text-info"> firebase init </i>
@@ -177,16 +182,16 @@ export const HostingContent = () => {
           </Col>
           <Col className="hosting-last bg-dark col-6 rounded">
             <h2 className="text-center bg-white text-dark rounded">4</h2>
-            <p className="fs-4 text-justify">
-              En la lista de opciones seleccionamos la de{" "}
+            <p className="text-justify">
+              En la lista de opciones seleccionamos la de
               <i className="text-info">Hosting</i>, luego seleccionamos la
               opción de usar un proyecto existente.
             </p>
           </Col>
           <Col className="hosting-last bg-dark col-6 rounded">
             <h2 className="text-center bg-white text-dark rounded">5</h2>
-            <p className="fs-4 text-justify">
-              Tenemos la opción de redireccionar todas las url al{" "}
+            <p className="text-justify">
+              Tenemos la opción de redireccionar todas las url al
               <i className="text-info">Index.html</i> y tambien la de hacer los
               deploys automaticos a <i className="text-info">Github</i> (implica
               logueo en github).
@@ -194,8 +199,8 @@ export const HostingContent = () => {
           </Col>
           <Col className="hosting-last bg-dark col-6 rounded">
             <h2 className="text-center bg-white text-dark rounded">6</h2>
-            <p className="fs-4 text-justify">
-              Hacemos el deploy de nuestra aplicación con el comando{" "}
+            <p className="text-justify">
+              Hacemos el deploy de nuestra aplicación con el comando
               <i className="text-info">firebase deploy</i>.
             </p>
           </Col>
@@ -211,7 +216,7 @@ export const HostingContent = () => {
           />
           <BiWorld
             onClick={change}
-            className="rounded-circle bg-white text-dark m-4 arrow-up"
+            className="rounded-circle bg-white text-dark m-4 arrow-up arrow-changer"
             size="3em"
           />
           <BiDownArrowAlt

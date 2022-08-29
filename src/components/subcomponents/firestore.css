@@ -16,8 +16,8 @@
   left: 0;
 }
 
-.firestore-box{
-  width: 40%;
+.firestore-box {
+  width: 50%;
 }
 
 .firestore-content {
@@ -41,5 +41,25 @@
 
   .firestore-box {
     width: 50vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .firestore-box {
+    width: 90% !important;
+  }
+  .firestore-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .anime-firestore-icon{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .all-desc {
+    font-size: 18px !important;
   }
 }

@@ -35,13 +35,6 @@
   line-height: 30px;
 }
 
-.auth-image {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: calc(77vh + 10vw);
-}
-
 .auth-container {
   position: absolute;
   left: 0;

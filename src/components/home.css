@@ -2,16 +2,21 @@
   text-align: justify;
 }
 
+.firebaseContainer {
+  display: flex !important;
+  justify-content: center;
+}
+
 .firebase-product {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .set-firebase-product {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 }
 
 .set-firebase-product label {
@@ -23,6 +28,9 @@
 }
 
 .container-upgrade-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #a08020;
 }
 
@@ -56,16 +64,67 @@
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .firebaseTitle {
+    font-size: 4em !important;
+  }
+  .logo-firebase-main {
+    left: 0% !important;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .firebaseContainer {
+    height: 70% !important;
+  }
+  .logo-firebase-main {
+    width: 100%;
+    margin: auto !important;
+  }
+  .logo-firebase-second {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 10em !important;
+  }
+  .first-paragraph,
+  .second-paragraph {
+    height: 80%;
+  }
+
+  .firebase-product {
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .logo-firebase-second {
+    display: none;
+  }
+  .first-paragraph,
+  .second-paragraph {
+    height: 90%;
+  }
+}
+
 .logo-firebase-main {
+  left: 10%;
+  font-size: 20em;
+  color: #039be5;
+  position: absolute;
   animation: flotar 2s infinite ease-out alternate;
 }
 
 .logo-firebase-second {
+  right: 0;
+  font-size: 15em;
+  color: #2c394b;
+  position: absolute;
   animation: flotar-second 1s infinite ease-out alternate;
-}
-
-.logo-firebase-third {
-  animation: flotar-third 1s infinite ease-out alternate;
 }
 
 @keyframes flotar {

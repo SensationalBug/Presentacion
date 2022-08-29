@@ -43,11 +43,11 @@ export const Firestore = (props) => {
       </p>
       <Modal {...modalProps} className="modal">
         {user ? (
-          <>
-            <img alt="..." src={firestoreImage} className="firestore-image" />
+          <Col>
+            <img alt="..." src={firestoreImage} className="components-image" />
             <div className="vidrio"></div>
             <FirestoreContent user={user} />
-          </>
+          </Col>
         ) : (
           <Container className="modalbox h-100 text-center">
             <h1>Favor Loguearse para ver el contenido de esta página.</h1>

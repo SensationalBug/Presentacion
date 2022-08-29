@@ -26,12 +26,18 @@ export const HomeContent = () => {
     alignItems: "center",
   });
   return (
-    <Parallax className="all-parallax" ref={parallax} pages={4}>
+    <Parallax className="all-parallax" ref={parallax} pages={6}>
       <Parallax.Layer offset={0} speed={2} className="all-window">
-        <Col className="col-2"></Col>
-        <Col className="col-4">
-          <h1 className="all-title">FIREBASE</h1>
+        <Col className="col-4 firebaseContainer">
+          <h1 className="all-title firebaseTitle">FIREBASE</h1>
         </Col>
+      </Parallax.Layer>
+
+      <Parallax.Layer offset={0} speed={-0.2}>
+        <SiFirebase
+          className="logo-firebase-main"
+          onClick={() => parallax.current.scrollTo(1)}
+        />
       </Parallax.Layer>
 
       <Parallax.Layer
@@ -43,8 +49,8 @@ export const HomeContent = () => {
           alignItems: styles.alignItems,
         }}
       >
-        <Row className="text-center container">
-          <Col className="firebase-text col-7">
+        <Row className="text-center container first-paragraph">
+          <Col className="firebase-text col-lg-7 col-md-12 col-12">
             <h1 className="text-center">Qué es Firebase?</h1>
             <p className="fs-4 text-justify">
               Firebase se trata de una plataforma creada por Google, cuya
@@ -60,6 +66,12 @@ export const HomeContent = () => {
         </Row>
       </Parallax.Layer>
 
+      <Parallax.Layer offset={1} speed={0.4}>
+        <div className="logo-firebase-second">
+          <SiFirebase onClick={() => parallax.current.scrollTo(2)} />
+        </div>
+      </Parallax.Layer>
+
       <Parallax.Layer
         offset={2}
         speed={1}
@@ -69,9 +81,8 @@ export const HomeContent = () => {
           alignItems: styles.alignItems,
         }}
       >
-        <Row className="text-center container">
-          <Col className="col-5"></Col>
-          <Col className="firebase-text col-7">
+        <Row className="text-center container second-paragraph">
+          <Col className="firebase-text col-lg-6 col-12">
             <h1 className="text-center">Firebase por plataforma</h1>
             <p className="fs-4 text-justify">
               Firebase te da las herramientas para programar apps de alta
@@ -80,79 +91,67 @@ export const HomeContent = () => {
               negocio y concentrarte en tus usuarios.
             </p>
           </Col>
+          <Col className="col-lg-6 col-12 firebase-product">
+            <Col className="col-md-2 col-4 set-firebase-product">
+              <FaAndroid
+                size="4em"
+                color="#00BFA5"
+                className="rounded-circle mb-2 bg-white p-3"
+              />
+              <label>Android</label>
+            </Col>
+            <Col className="col-md-2 col-4 set-firebase-product">
+              <AiFillCode
+                size="4em"
+                color="#FD8C09"
+                className="rounded-circle mb-2 bg-white p-3"
+              />
+              <label>C++</label>
+            </Col>
+            <Col className="col-md-2 col-4 set-firebase-product">
+              <IoIosAppstore
+                size="4em"
+                color="#16AACA"
+                className="rounded-circle mb-2 bg-white p-3"
+              />
+              <label>IOS</label>
+            </Col>
+            <Col className="col-md-2 col-4 set-firebase-product">
+              <FaUnity
+                size="4em"
+                color="#000000"
+                className="rounded-circle mb-2 bg-white p-3"
+              />
+              <label>Unity</label>
+            </Col>
+            <Col className="col-md-2 col-4 set-firebase-product">
+              <FaCode
+                size="4em"
+                color="#C52062"
+                className="rounded-circle mb-2 bg-white p-3"
+              />
+              <label>Web</label>
+            </Col>
+            <Col className="col-md-2 col-4 set-firebase-product">
+              <IoMdKey
+                size="4em"
+                color="#3F51B5"
+                className="rounded-circle mb-2 bg-white p-3"
+              />
+              <label>Adm Ctrl</label>
+            </Col>
+          </Col>
         </Row>
       </Parallax.Layer>
 
       <Parallax.Layer
-        offset={2}
-        speed={0.4}
-        style={{
-          display: styles.display,
-          justifyContent: styles.justifyContent,
-          alignItems: "end",
-          top: "-4vh",
-        }}
-      >
-        <Col className="col-9 firebase-product">
-          <Col className="set-firebase-product">
-            <FaAndroid
-              size="5em"
-              color="#00BFA5"
-              className="rounded-circle mb-2 bg-white p-3"
-            />
-            <label>Android</label>
-          </Col>
-          <Col className="set-firebase-product">
-            <AiFillCode
-              size="5em"
-              color="#FD8C09"
-              className="rounded-circle mb-2 bg-white p-3"
-            />
-            <label>C++</label>
-          </Col>
-          <Col className="set-firebase-product">
-            <IoIosAppstore
-              size="5em"
-              color="#16AACA"
-              className="rounded-circle mb-2 bg-white p-3"
-            />
-            <label>IOS</label>
-          </Col>
-          <Col className="set-firebase-product">
-            <FaUnity
-              size="5em"
-              color="#000000"
-              className="rounded-circle mb-2 bg-white p-3"
-            />
-            <label>Unity</label>
-          </Col>
-          <Col className="set-firebase-product">
-            <FaCode
-              size="5em"
-              color="#C52062"
-              className="rounded-circle mb-2 bg-white p-3"
-            />
-            <label>Web</label>
-          </Col>
-          <Col className="set-firebase-product">
-            <IoMdKey
-              size="5em"
-              color="#3F51B5"
-              className="rounded-circle mb-2 bg-white p-3"
-            />
-            <label>Admin Control</label>
-          </Col>
-        </Col>
-      </Parallax.Layer>
-
-      <Parallax.Layer
         offset={3}
-        speed={0.4}
+        speed={0}
         style={{
           display: styles.display,
         }}
       >
-        <Col className="col-4 py-5 container-set-app text-dar">
+        <Col className="col-12 py-5 container-set-app">
           <h2 className="text-center text-uppercase">Compila tu App</h2>
           <Col className="set-app">
             <Col>
@@ -184,14 +183,14 @@ export const HomeContent = () => {
       </Parallax.Layer>
 
       <Parallax.Layer
-        offset={3}
-        speed={0.6}
+        offset={4}
+        speed={0.2}
         style={{
           display: styles.display,
           justifyContent: styles.justifyContent,
         }}
       >
-        <Col className="col-4 py-5 container-upgrade-app">
+        <Col className="col-12 py-5 container-upgrade-app">
           <h2 className="text-center text-uppercase">
             Mejora la calidad de tu Web
           </h2>
@@ -213,14 +212,14 @@ export const HomeContent = () => {
       </Parallax.Layer>
 
       <Parallax.Layer
-        offset={3}
-        speed={0.8}
+        offset={5}
+        speed={0.4}
         style={{
           display: styles.display,
           flexDirection: "row-reverse",
         }}
       >
-        <Col className="col-4 py-5 container-grow-app">
+        <Col className="col-12 py-5 container-grow-app">
           <h2 className="text-center text-uppercase">Haz crecer tu negocio</h2>
           <Col className="set-app">
             <Col>
@@ -247,43 +246,7 @@ export const HomeContent = () => {
         </Col>
       </Parallax.Layer>
 
-      <Parallax.Layer offset={0} speed={-0.2}>
-        <SiFirebase
-          size="20em"
-          className="logo-firebase-main"
-          onClick={() => parallax.current.scrollTo(1)}
-          style={{
-            position: "absolute",
-            left: "10%",
-            color: "#039BE5",
-          }}
-        />
-      </Parallax.Layer>
-
-      <Parallax.Layer offset={1} speed={-0.1}>
-        <SiFirebase
-          size="15em"
-          className="logo-firebase-second"
-          onClick={() => parallax.current.scrollTo(2)}
-          style={{
-            position: "absolute",
-            right: "15vw",
-            color: "#2C394B",
-          }}
-        />
-        <SiFirebase
-          size="15em"
-          className="logo-firebase-third"
-          onClick={() => parallax.current.scrollTo(3)}
-          style={{
-            position: "absolute",
-            left: "20vw",
-            color: "#FF8A65",
-          }}
-        />
-      </Parallax.Layer>
-
-      <Parallax.Layer offset={4} speed={-0.2} className="all-arrow-container">
+      <Parallax.Layer offset={6} speed={-0.2} className="all-arrow-container">
         <FaArrowUp
           onClick={() => parallax.current.scrollTo(0)}
           size="3em"

@@ -47,12 +47,14 @@ export const Auth = (props) => {
         }}
         className="btn element texto"
       >
-        Authentication
+        Auth
       </p>
       <Modal {...modalProps}>
-        <img alt="..." src={authImage} className="auth-image" />
-        <div className="vidrio"></div>
-        <Login clear={clear} />
+        <Col>
+          <img alt="..." src={authImage} className="components-image" />
+          <div className="vidrio"></div>
+          <Login clear={clear} />
+        </Col>
       </Modal>
     </Col>
   );
